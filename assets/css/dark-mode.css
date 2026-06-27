@@ -1,0 +1,93 @@
+/*
+ * Dark Mode Theme Overrides for Academic Research Editing & Proofreading
+ * Designed by Antigravity
+ */
+
+html[data-theme="dark"] {
+  --primary-bg: #0B132B;
+  --secondary-bg: #111827;
+  --card-bg: #172033;
+  --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.25), 0 1px 3px rgba(0, 0, 0, 0.1);
+  --card-shadow-hover: 0 20px 40px rgba(0, 0, 0, 0.4), 0 1px 5px rgba(0, 0, 0, 0.2);
+  
+  --text-main: #F8FAFC;
+  --text-muted: #CBD5E1;
+  --text-light: #94A3B8;
+  
+  --accent-blue: #3B82F6;
+  --accent-teal: #14B8A6;
+  --accent-gold: #D4A72C;
+  --accent-gold-rgb: 212, 167, 44;
+  --accent-blue-rgb: 59, 130, 246;
+  --accent-teal-rgb: 20, 184, 166;
+  
+  --border-color: #1F2937;
+}
+
+/* Adjust navbar transparency and blur in dark mode */
+html[data-theme="dark"] .navbar-custom {
+  background-color: rgba(11, 19, 43, 0.85);
+  border-bottom: 1px solid var(--border-color);
+}
+
+/* Custom form inputs style update for dark mode */
+html[data-theme="dark"] .premium-input {
+  background-color: var(--secondary-bg);
+}
+html[data-theme="dark"] .premium-input:focus ~ .premium-label,
+html[data-theme="dark"] .premium-input:not(:placeholder-shown) ~ .premium-label {
+  background-color: var(--secondary-bg);
+}
+
+/* Offcanvas custom premium mobile adjustments for dark mode */
+html[data-theme="dark"] .offcanvas-custom {
+  background-color: var(--primary-bg);
+  border-color: var(--border-color);
+}
+
+/* Button style overrides for dark mode readability */
+html[data-theme="dark"] .btn-premium-secondary {
+  color: var(--text-main) !important;
+  border-color: var(--border-color);
+}
+html[data-theme="dark"] .btn-premium-secondary:hover {
+  background-color: var(--text-main);
+  color: var(--primary-bg) !important;
+}
+html[data-theme="dark"] .tag-badge {
+  background-color: var(--secondary-bg);
+}
+
+/* Set scrollbars for dark mode */
+html[data-theme="dark"] ::-webkit-scrollbar {
+  width: 10px;
+}
+html[data-theme="dark"] ::-webkit-scrollbar-track {
+  background: var(--primary-bg);
+}
+html[data-theme="dark"] ::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 5px;
+}
+html[data-theme="dark"] ::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-teal);
+}
+
+/* Dark mode form input fields */
+html[data-theme="dark"] .form-control {
+  background-color: var(--secondary-bg) !important;
+  color: var(--text-main) !important;
+  border-color: var(--border-color) !important;
+}
+html[data-theme="dark"] .form-control::placeholder {
+  color: var(--text-light) !important;
+}
+
+/* Dark mode select dropdown and textarea */
+html[data-theme="dark"] select.form-select,
+html[data-theme="dark"] select,
+html[data-theme="dark"] textarea {
+  background-color: var(--secondary-bg) !important;
+  color: var(--text-main) !important;
+  border-color: var(--border-color) !important;
+}

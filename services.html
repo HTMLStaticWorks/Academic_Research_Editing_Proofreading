@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services | Editora</title>
+  <meta name="description" content="Explore our range of academic consulting services including dissertation styling, peer review prep, and subject specialist matching.">
+  
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="shortcut icon" type="image/svg+xml" href="assets/favicon.svg">
+  
+  <link id="bootstrap-theme-link" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dark-mode.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+</head>
+<body>
+
+  <!-- Premium Overlay Loader -->
+  <div id="page-loader">
+    <div class="loader-logo">Editora</div>
+    <div class="loader-bar">
+      <div class="loader-progress"></div>
+    </div>
+  </div>
+
+  <!-- Theme and RTL Controls Container -->
+  <div class="theme-controls-container">
+    <button id="themeToggle" class="btn-control" aria-label="Toggle Theme">
+      <i class="bi bi-sun-fill light-icon"></i>
+      <i class="bi bi-moon-stars-fill dark-icon"></i>
+    </button>
+    <button id="rtlToggle" class="btn-control" aria-label="Toggle RTL">
+      <span>RTL</span>
+    </button>
+  </div>
+
+  <!-- Header & Sticky Navbar -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+      <div class="container">
+        <a class="navbar-brand-custom" href="index.html">
+          <svg viewBox="0 0 24 24" width="28" height="28" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2L2 22h20L12 2zm0 4l6.5 13H5.5L12 6zm-1 5h2v4h-2v-4zm0-3h2v2h-2V8z"/>
+          </svg>
+          <span>Editora</span>
+        </a>
+        
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+          <i class="bi bi-list text-main" style="font-size: 1.75rem;"></i>
+        </button>
+        
+        <div class="collapse navbar-collapse d-none d-lg-flex" id="navbarNav">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link-custom" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link-custom" href="home-2.html">Home 2</a></li>
+            <li class="nav-item"><a class="nav-link-custom" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link-custom active" href="services.html">Services</a></li>
+            <li class="nav-item"><a class="nav-link-custom" href="case-studies.html">Case Studies</a></li>
+            <li class="nav-item"><a class="nav-link-custom" href="blog.html">Blog</a></li>
+            <li class="nav-item"><a class="nav-link-custom" href="pricing.html">Pricing</a></li>
+            <li class="nav-item"><a class="nav-link-custom" href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Offcanvas Mobile Navigation -->
+    <div class="offcanvas offcanvas-start offcanvas-custom d-lg-none" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title font-serif fw-bold text-main" id="offcanvasNavbarLabel">Editora</h5>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1">
+          <li class="nav-item"><a class="nav-link-custom" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link-custom" href="home-2.html">Home 2</a></li>
+          <li class="nav-item"><a class="nav-link-custom" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link-custom active" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link-custom" href="case-studies.html">Case Studies</a></li>
+          <li class="nav-item"><a class="nav-link-custom" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link-custom" href="pricing.html">Pricing</a></li>
+          <li class="nav-item"><a class="nav-link-custom" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <!-- Banner Header -->
+  <section class="py-5" style="padding-top: 140px !important; background-color: var(--secondary-bg);">
+    <div class="container py-5 text-center scroll-reveal revealed">
+      <span class="section-subtitle">Scope of Practice</span>
+      <h1 class="display-5 fw-bold text-main mb-3">Academic Editing Services</h1>
+      <p class="lead-text mx-auto mb-0" style="max-width: 600px;">
+        Providing meticulous publication-level editing tailored to thesis formats, research articles, and peer-reviewed submissions.
+      </p>
+    </div>
+  </section>
+
+  <!-- Service List Container (7 Items total, odd centering rule active on tablet) -->
+  <section class="py-5">
+    <div class="container py-5">
+      <div class="card-grid-container grid-3-col-desktop scroll-reveal revealed">
+        
+        <!-- Service Card 1 -->
+        <div class="card-item" id="thesis">
+          <div class="premium-card">
+            <div class="card-icon-box">
+              <i class="bi bi-book-half"></i>
+            </div>
+            <div class="card-title-container">
+              <h3>Thesis & Dissertation Editing</h3>
+            </div>
+            <p class="text-muted text-start mb-4 flex-grow-1" style="font-size: 0.95rem;">
+              Complete flow and structural audit for postgraduates, structured exactly to university guidelines. Focuses on research logical hierarchies.
+            </p>
+            <a href="contact.html?service=thesis" class="btn-premium btn-premium-primary justify-content-center">Book This Service</a>
+          </div>
+        </div>
+
+        <!-- Service Card 2 -->
+        <div class="card-item" id="journal">
+          <div class="premium-card">
+            <div class="card-icon-box">
+              <i class="bi bi-journal-bookmark-fill"></i>
+            </div>
+            <div class="card-title-container">
+              <h3>Journal Article Editing</h3>
+            </div>
+            <p class="text-muted text-start mb-4 flex-grow-1" style="font-size: 0.95rem;">
+              Refining manuscripts to meet high impact factor journal standards, adjusting argument logic and publication readability.
+            </p>
+            <a href="contact.html?service=journal" class="btn-premium btn-premium-primary justify-content-center">Book This Service</a>
+          </div>
+        </div>
+
+        <!-- Service Card 3 -->
+        <div class="card-item" id="proofreading">
+          <div class="premium-card">
+            <div class="card-icon-box">
+              <i class="bi bi-pencil-square"></i>
+            </div>
+            <div class="card-title-container">
+              <h3>Research Paper Proofreading</h3>
+            </div>
+            <p class="text-muted text-start mb-4 flex-grow-1" style="font-size: 0.95rem;">
+              Correcting grammar, syntax, flow mistakes, typos, and reference styles. For publication-ready texts.
+            </p>
+            <a href="contact.html?service=proofreading" class="btn-premium btn-premium-primary justify-content-center">Book This Service</a>
+          </div>
+        </div>
+
+        <!-- Service Card 4 -->
+        <div class="card-item" id="grant">
+          <div class="premium-card">
+            <div class="card-icon-box">
+              <i class="bi bi-bank"></i>
+            </div>
+            <div class="card-title-container">
+              <h3>Grant Proposal Review</h3>
+            </div>
+            <p class="text-muted text-start mb-4 flex-grow-1" style="font-size: 0.95rem;">
+              Enhancing narrative tone, alignment with specific funding bodies, and clarity of impact parameters.
+            </p>
+            <a href="contact.html?service=grant" class="btn-premium btn-premium-primary justify-content-center">Book This Service</a>
+          </div>
+        </div>
+
+        <!-- Service Card 5 -->
+        <div class="card-item">
+          <div class="premium-card">
+            <div class="card-icon-box">
+              <i class="bi bi-type"></i>
+            </div>
+            <div class="card-title-container">
+              <h3>Academic Formatting</h3>
+            </div>
+            <p class="text-muted text-start mb-4 flex-grow-1" style="font-size: 0.95rem;">
+              Aligning reference layouts, bibliography entries, index elements, and margin specs to APA, Harvard, Chicago, or IEEE rules.
+            </p>
+            <a href="contact.html?service=formatting" class="btn-premium btn-premium-primary justify-content-center">Book This Service</a>
+          </div>
+        </div>
+
+        <!-- Service Card 6 -->
+        <div class="card-item" id="matching">
+          <div class="premium-card">
+            <div class="card-icon-box">
+              <i class="bi bi-person-workspace"></i>
+            </div>
+            <div class="card-title-container">
+              <h3>Subject Specialist Matching</h3>
+            </div>
+            <p class="text-muted text-start mb-4 flex-grow-1" style="font-size: 0.95rem;">
+              Connecting your document with an editor whose PhD research lies within your exact discipline.
+            </p>
+            <a href="contact.html?service=matching" class="btn-premium btn-premium-primary justify-content-center">Book This Service</a>
+          </div>
+        </div>
+
+        <!-- Service Card 7 (Odd centered card in tablet view) -->
+        <div class="card-item">
+          <div class="premium-card">
+            <div class="card-icon-box">
+              <i class="bi bi-file-earmark-arrow-up"></i>
+            </div>
+            <div class="card-title-container">
+              <h3>Publication Preparation Support</h3>
+            </div>
+            <p class="text-muted text-start mb-4 flex-grow-1" style="font-size: 0.95rem;">
+              Comprehensive cover letter construction, journal suggestions list, and editing response letters to peer review comments.
+            </p>
+            <a href="contact.html?service=publication" class="btn-premium btn-premium-primary justify-content-center">Book This Service</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Subject Matching Section -->
+  <section class="py-5 bg-light-custom" style="background-color: var(--secondary-bg);">
+    <div class="container py-5">
+      <div class="row align-items-center">
+        <div class="col-lg-6 text-start mb-5 mb-lg-0 scroll-reveal">
+          <span class="section-subtitle">Precision Matcher</span>
+          <h2 class="section-title">Subject Specialist Matching</h2>
+          <p class="lead-text mb-4">
+            Select your discipline to dynamically load current available specialist editors. We align specific doctoral level specialists with your field.
+          </p>
+          <div class="matching-widget">
+            <label for="fieldSelect" class="form-label text-main fw-semibold mb-2">Select Your Research Field:</label>
+            <select id="fieldSelect" class="matching-selector">
+              <option value="medicine">Medicine & Life Sciences</option>
+              <option value="engineering">Engineering & Physical Sciences</option>
+              <option value="humanities">Humanities & Arts</option>
+              <option value="social">Social Sciences & Economics</option>
+            </select>
+            
+            <div class="mb-4">
+              <span class="d-block text-main fw-semibold mb-2">Academic Specializations Tags:</span>
+              <div id="tagsContainer" class="d-flex flex-wrap">
+                <!-- Loaded dynamically by JS -->
+              </div>
+            </div>
+            
+            <button id="matchBtn" class="btn-premium btn-premium-primary w-100 justify-content-center">
+              Scan & Find My Specialist Editor
+            </button>
+          </div>
+        </div>
+        
+        <div class="col-lg-6 scroll-reveal">
+          <div class="text-center p-4">
+            <span class="section-subtitle mb-3 d-block">Matching Registry Visualizer</span>
+            <div class="matching-visualizer mb-4">
+              <div class="radar-grid"></div>
+              <div class="radar-ping"></div>
+              <i class="bi bi-fingerprint text-accent" style="font-size: 3rem; color: var(--accent-teal); z-index: 1;"></i>
+            </div>
+            <div id="matchResult">
+              <span class="text-muted">Select a discipline on the left and click match.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer-custom">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-lg-4 text-start">
+          <a class="footer-logo text-decoration-none" href="index.html">
+            <svg viewBox="0 0 24 24" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2L2 22h20L12 2zm0 4l6.5 13H5.5L12 6zm-1 5h2v4h-2v-4zm0-3h2v2h-2V8z"/>
+            </svg>
+            <span>Editora</span>
+          </a>
+          <p class="footer-desc mb-4">
+            A premium minimalist academic consulting service designed to support scholars, faculty, PhD students, and journals secure worldwide publication recognition.
+          </p>
+          <div class="d-flex gap-3">
+            <a href="#" aria-label="LinkedIn" class="btn-control"><i class="bi bi-linkedin"></i></a>
+            <a href="#" aria-label="Twitter" class="btn-control"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" aria-label="Facebook" class="btn-control"><i class="bi bi-facebook"></i></a>
+          </div>
+        </div>
+        
+        <div class="col-sm-6 col-lg-2 text-start offset-lg-1">
+          <h5 class="footer-heading">Services</h5>
+          <ul class="footer-links">
+            <li class="footer-link-item"><a href="services.html#thesis">Thesis Editing</a></li>
+            <li class="footer-link-item"><a href="services.html#journal">Journal Editing</a></li>
+            <li class="footer-link-item"><a href="services.html#grant">Grant Review</a></li>
+            <li class="footer-link-item"><a href="services.html#proofreading">Proofreading</a></li>
+          </ul>
+        </div>
+        
+        <div class="col-sm-6 col-lg-2 text-start">
+          <h5 class="footer-heading">Resources</h5>
+          <ul class="footer-links">
+            <li class="footer-link-item"><a href="blog.html">Research Blog</a></li>
+            <li class="footer-link-item"><a href="pricing.html">Pricing Structure</a></li>
+            <li class="footer-link-item"><a href="case-studies.html">Case Studies</a></li>
+            <li class="footer-link-item"><a href="about.html">About Me</a></li>
+          </ul>
+        </div>
+        
+        <div class="col-lg-3 text-start">
+          <h5 class="footer-heading">Newsletter</h5>
+          <p class="footer-desc mb-3">Subscribe to receive academic editing tips and publication guides.</p>
+          <form class="position-relative">
+            <input type="email" class="form-control rounded-pill border py-2 px-3 text-start" style="font-size: 0.85rem;" placeholder="Email address" required>
+            <button class="btn btn-primary rounded-circle position-absolute" style="top: 3px; right: 3px; padding: 4px 10px;" type="submit" aria-label="Subscribe">
+              <i class="bi bi-arrow-right"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+      
+      <div class="border-top mt-5 pt-4 d-flex flex-wrap justify-content-between align-items-center">
+        <p class="small text-muted mb-0">&copy; 2026 Editora. All Rights Reserved.</p>
+        <div class="d-flex gap-3">
+          <a href="#" class="small text-muted text-decoration-none">Privacy Policy</a>
+          <a href="#" class="small text-muted text-decoration-none">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button id="backToTop" class="back-to-top" aria-label="Back to Top">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+/*
+ * RTL (Right-to-Left) Stylesheet for Academic Research Editing & Proofreading
+ * Designed by Antigravity
+ */
+
+html[dir="rtl"] {
+  direction: rtl;
+  unicode-bidi: embed;
+}
+
+/* Base font adjustments if necessary for RTL reading flow */
+html[dir="rtl"] body {
+  font-family: var(--font-sans);
+}
+
+/* Force left/right alignment shifts based on RTL directory rules */
+html[dir="rtl"] .text-start {
+  text-align: right !important;
+}
+html[dir="rtl"] .text-end {
+  text-align: left !important;
+}
+
+/* Adjust timeline flow line for RTL vertical alignment */
+@media (max-width: 991.98px) {
+  html[dir="rtl"] .timeline-flow::before {
+    right: 30px;
+    left: auto;
+  }
+}
+
+/* Adjust float scan animation direction */
+@keyframes edit-scan-rtl {
+  0% { right: -100%; }
+  50%, 100% { right: 100%; }
+}
+html[dir="rtl"] .manuscript-line::after {
+  animation: edit-scan-rtl 3.5s infinite linear;
+}
+
+/* Custom form corrections to prevent eye icons and text overlapping */
+html[dir="rtl"] .premium-form-group .form-icon-end {
+  left: 1.25rem;
+  right: auto;
+}
+
+/* Offcanvas custom premium mobile adjustments for RTL */
+html[dir="rtl"] .offcanvas.offcanvas-start {
+  transform: translateX(100%);
+}
+html[dir="rtl"] .offcanvas.offcanvas-start.show {
+  transform: none;
+}
