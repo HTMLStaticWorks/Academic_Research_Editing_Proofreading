@@ -87,13 +87,45 @@
   </header>
 
   <!-- Banner Header -->
-  <section class="py-5" style="padding-top: 140px !important; background-color: var(--secondary-bg);">
-    <div class="container py-5 text-center scroll-reveal revealed">
-      <span class="section-subtitle">Academic Writing Desk</span>
-      <h1 class="display-5 fw-bold text-main mb-3">Scholarly Guides & Resources</h1>
-      <p class="lead-text mx-auto mb-0" style="max-width: 600px;">
+  <section class="py-5" style="
+    padding-top: 140px !important;
+    padding-bottom: 80px !important;
+    position: relative;
+    background: url('assets/images/blog-banner-bg.png') center center / cover no-repeat;
+    overflow: hidden;
+  ">
+    <!-- Dark overlay for readability -->
+    <div style="
+      position: absolute; inset: 0;
+      background: rgba(10, 25, 47, 0.68);
+      backdrop-filter: blur(1px);
+    "></div>
+
+    <div class="container py-5 text-center scroll-reveal revealed" style="position: relative; z-index: 1;">
+      <span class="section-subtitle" style="color: var(--accent-teal); opacity: 1;">Academic Writing Desk</span>
+      <h1 class="display-5 fw-bold mb-3" style="color: #ffffff;">Scholarly Guides &amp; Resources</h1>
+      <p class="mx-auto mb-0" style="max-width: 600px; color: rgba(255,255,255,0.82); font-size: 1.05rem; line-height: 1.75;">
         Providing expert insights into peer review processes, publication templates, and common dissertation challenges.
       </p>
+    </div>
+  </section>
+
+  <!-- Featured Insight Section -->
+  <section class="py-5 bg-light-custom" style="background-color: var(--secondary-bg);">
+    <div class="container py-5">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6 scroll-reveal revealed">
+          <img src="assets/images/featured-blog-post.png" alt="Featured Research Post" class="img-fluid rounded shadow-sm w-100" style="object-fit: cover; min-height: 350px; border: 1px solid var(--border-color);">
+        </div>
+        <div class="col-lg-6 text-start scroll-reveal revealed">
+          <span class="badge text-white px-3 py-2 rounded-pill mb-3" style="background-color: var(--accent-teal);">Featured Insight</span>
+          <h2 class="section-title mb-4">Mastering Data Visualization in High-Impact Journals</h2>
+          <p class="lead-text mb-4">
+            Discover the crucial role that cleanly formatted graphs, clear tables, and precise captions play in securing peer-reviewer approval.
+          </p>
+          <a href="#" class="btn-premium btn-premium-primary d-inline-flex align-items-center gap-2">Read Featured Article <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -105,7 +137,7 @@
         <!-- Blog Card 1 -->
         <div class="card-item">
           <div class="premium-card">
-            <span class="section-subtitle text-start" style="font-size: 0.75rem;">Writing tips</span>
+            <span class="section-subtitle text-start" style="font-size: 0.75rem;">Research Writing Tips</span>
             <div class="card-title-container">
               <h3>Avoid Common Pitfalls in Scholarly Style</h3>
             </div>
@@ -121,7 +153,7 @@
         <!-- Blog Card 2 -->
         <div class="card-item">
           <div class="premium-card">
-            <span class="section-subtitle text-start" style="font-size: 0.75rem;">Publication guidelines</span>
+            <span class="section-subtitle text-start" style="font-size: 0.75rem;">Publication Guidelines</span>
             <div class="card-title-container">
               <h3>Understanding the Peer Review Letter Process</h3>
             </div>
@@ -137,7 +169,7 @@
         <!-- Blog Card 3 (Centered on tablet views) -->
         <div class="card-item">
           <div class="premium-card">
-            <span class="section-subtitle text-start" style="font-size: 0.75rem;">Thesis preparation</span>
+            <span class="section-subtitle text-start" style="font-size: 0.75rem;">Academic Guides</span>
             <div class="card-title-container">
               <h3>Standardizing Dissertation Citations</h3>
             </div>
@@ -150,6 +182,45 @@
           </div>
         </div>
 
+      </div>
+    </div>
+  </section>
+
+  <!-- Consultation CTA Section -->
+  <style>
+    .btn-cta-primary {
+      background-color: #ffffff !important;
+      color: #0a192f !important;
+      transition: all 0.3s ease;
+    }
+    .btn-cta-primary:hover {
+      background-color: #f1f5f9 !important;
+      color: #000000 !important;
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    }
+    .btn-cta-outline {
+      background-color: transparent !important;
+      color: #ffffff !important;
+      border: 1px solid #ffffff !important;
+      transition: all 0.3s ease;
+    }
+    .btn-cta-outline:hover {
+      background-color: #ffffff !important;
+      color: #0a192f !important;
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    }
+  </style>
+  <section class="py-5 text-center" style="background-color: #0a192f;">
+    <div class="container py-5 scroll-reveal revealed">
+      <h2 class="display-6 fw-bold mb-4 font-serif text-white">Ready to elevate your manuscript?</h2>
+      <p class="mx-auto mb-5 text-white-50" style="max-width: 650px; font-size: 1.1rem;">
+        Get a free sample edit or schedule a consultation with Dr. Claire Sinclair to discuss your upcoming publication goals.
+      </p>
+      <div class="d-flex justify-content-center gap-3 flex-wrap">
+        <a href="contact.html" class="btn-premium btn-cta-primary">Schedule Consultation</a>
+        <a href="pricing.html" class="btn-premium btn-cta-outline">View Pricing Plans</a>
       </div>
     </div>
   </section>

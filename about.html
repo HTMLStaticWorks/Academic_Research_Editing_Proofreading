@@ -87,71 +87,153 @@
   </header>
 
   <!-- Banner Header -->
-  <section class="py-5" style="padding-top: 140px !important; background-color: var(--secondary-bg);">
-    <div class="container py-5 text-center scroll-reveal revealed">
-      <span class="section-subtitle">Biography</span>
-      <h1 class="display-5 fw-bold text-main mb-3">Academic Experience & Credentials</h1>
-      <p class="lead-text mx-auto mb-0" style="max-width: 600px;">
+  <section class="py-5" style="
+    padding-top: 140px !important;
+    padding-bottom: 80px !important;
+    position: relative;
+    background: url('assets/images/about-banner-bg.png') center center / cover no-repeat;
+    overflow: hidden;
+  ">
+    <!-- Dark overlay for readability -->
+    <div style="
+      position: absolute; inset: 0;
+      background: rgba(10, 25, 47, 0.65);
+      backdrop-filter: blur(1px);
+    "></div>
+
+    <div class="container py-5 text-center scroll-reveal revealed" style="position: relative; z-index: 1;">
+      <span class="section-subtitle" style="color: var(--accent-teal); opacity: 1;">Biography</span>
+      <h1 class="display-5 fw-bold mb-3" style="color: #ffffff;">Academic Experience &amp; Credentials</h1>
+      <p class="mx-auto mb-0" style="max-width: 600px; color: rgba(255,255,255,0.82); font-size: 1.05rem; line-height: 1.75;">
         Providing scholarly editing with professional expertise. Learn about my academic background and consultant history.
       </p>
     </div>
   </section>
 
-  <!-- Consultant Details Profile -->
+  <!-- About the Editor -->
   <section class="py-5">
     <div class="container py-5">
       <div class="row align-items-center">
         <div class="col-lg-6 text-start mb-5 mb-lg-0 scroll-reveal revealed">
-          <span class="section-subtitle">Editorial Philosophy</span>
+          <span class="section-subtitle">About the Editor</span>
           <h2 class="section-title mb-4">I specialize in high-impact publication preparation.</h2>
           <p class="lead-text mb-4">
             My name is Dr. Claire Sinclair, and I am an independent academic editing consultant. Unlike large agencies that handle manuscripts as volume products, I review every manuscript individually. My goal is simple: to make your manuscript speak with clarity, precision, and academic authority.
           </p>
           <p class="text-muted mb-4">
-            I hold a PhD in English and Comparative Literature from Columbia University, with over 15 years of experience refereeing journals, editing manuscripts for academic presses, and advising faculty on grant applications.
+            I work directly with scholars to refine their research into polished, publication-ready manuscripts, ensuring their voices are heard and their arguments are clearly articulated.
           </p>
-          
-          <!-- Aligned check list components -->
-          <ul class="premium-check-list">
-            <li class="check-list-item">
-              <span class="check-icon-wrapper"><i class="bi bi-patch-check-fill"></i></span>
-              <div class="check-list-text">
-                <strong>Doctoral Credential:</strong> PhD from an Ivy League university with active journal review assignments.
-              </div>
-            </li>
-            <li class="check-list-item">
-              <span class="check-icon-wrapper"><i class="bi bi-patch-check-fill"></i></span>
-              <div class="check-list-text">
-                <strong>Philosophy:</strong> I focus on logical structure and rhetorical flow, not just grammatical typos.
-              </div>
-            </li>
-            <li class="check-list-item">
-              <span class="check-icon-wrapper"><i class="bi bi-patch-check-fill"></i></span>
-              <div class="check-list-text">
-                <strong>Direct Collaboration:</strong> You converse directly with me, ensuring subject specialism and secure data control.
-              </div>
-            </li>
-          </ul>
         </div>
-        
         <div class="col-lg-6 scroll-reveal revealed">
+          <img src="assets/images/about-editor.png" alt="Dr. Claire Sinclair - Academic Editor" class="img-fluid rounded shadow-sm w-100" style="object-fit: cover; min-height: 400px;">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Expertise -->
+  <section class="py-5" style="background-color: var(--secondary-bg);">
+    <div class="container py-5 text-center scroll-reveal revealed">
+      <span class="section-subtitle">Areas of Specialization</span>
+      <h2 class="section-title mb-5">Expertise</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <a href="services.html#journal" class="text-decoration-none">
+            <div class="p-4 border rounded bg-white h-100 text-center shadow-sm card-hover">
+              <i class="bi bi-journal-text text-main mb-3" style="font-size: 2rem;"></i>
+              <h4 class="font-serif text-main">Journal Editing</h4>
+              <p class="text-muted small mb-0">Preparation for high-impact peer-reviewed journals.</p>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-4">
+          <a href="services.html#thesis" class="text-decoration-none">
+            <div class="p-4 border rounded bg-white h-100 text-center shadow-sm card-hover">
+              <i class="bi bi-book text-main mb-3" style="font-size: 2rem;"></i>
+              <h4 class="font-serif text-main">Thesis & Dissertations</h4>
+              <p class="text-muted small mb-0">Comprehensive structural and stylistic editing for PhD candidates.</p>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-4">
+          <a href="services.html#grant" class="text-decoration-none">
+            <div class="p-4 border rounded bg-white h-100 text-center shadow-sm card-hover">
+              <i class="bi bi-file-earmark-check text-main mb-3" style="font-size: 2rem;"></i>
+              <h4 class="font-serif text-main">Grant Proposals</h4>
+              <p class="text-muted small mb-0">Persuasive narrative refinement for academic funding applications.</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Academic Background -->
+  <section class="py-5">
+    <div class="container py-5">
+      <div class="row align-items-center">
+        <div class="col-lg-5 mb-4 mb-lg-0 scroll-reveal revealed">
+          <span class="section-subtitle">Credentials</span>
+          <h2 class="section-title mb-4">Academic Background</h2>
+          <p class="lead-text mb-0">
+            A solid academic foundation ensuring deep understanding of scholarly standards and research methodologies.
+          </p>
+        </div>
+        <div class="col-lg-6 offset-lg-1 scroll-reveal revealed">
           <div class="p-4 border rounded bg-light-custom" style="background-color: var(--secondary-bg);">
-            <h4 class="font-serif mb-4 text-start text-main">Selected History & Affiliations</h4>
             <div class="mb-4 text-start border-bottom pb-3">
-              <span class="small text-teal d-block fw-semibold mb-1" style="color: var(--accent-teal);">2018 - Present</span>
-              <strong class="text-main">Lead Consultant, Editora</strong>
-              <p class="small text-muted mb-0">Managed and edited 500+ successful research papers and dissertations.</p>
+              <span class="small text-teal d-block fw-semibold mb-1" style="color: var(--accent-teal);">2009 - 2012</span>
+              <strong class="text-main">Ph.D. in English and Comparative Literature</strong>
+              <p class="small text-muted mb-0">Columbia University</p>
             </div>
             <div class="mb-4 text-start border-bottom pb-3">
-              <span class="small text-teal d-block fw-semibold mb-1" style="color: var(--accent-teal);">2012 - 2018</span>
-              <strong class="text-main">Associate Professor & Journal Editor</strong>
-              <p class="small text-muted mb-0">Reviewed and curated articles for peer-reviewed literature reviews.</p>
+              <span class="small text-teal d-block fw-semibold mb-1" style="color: var(--accent-teal);">2007 - 2009</span>
+              <strong class="text-main">M.A. in Literature</strong>
+              <p class="small text-muted mb-0">Columbia University</p>
             </div>
             <div class="text-start">
-              <span class="small text-teal d-block fw-semibold mb-1" style="color: var(--accent-teal);">2009 - 2012</span>
-              <strong class="text-main">Fellow researcher, Columbia University</strong>
-              <p class="small text-muted mb-0">Doctoral dissertation focusing on academic publishing patterns.</p>
+              <span class="small text-teal d-block fw-semibold mb-1" style="color: var(--accent-teal);">2003 - 2007</span>
+              <strong class="text-main">B.A. in English</strong>
+              <p class="small text-muted mb-0">University of Pennsylvania</p>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Editing Philosophy -->
+  <section class="py-5" style="background-color: var(--secondary-bg);">
+    <div class="container py-5">
+      <div class="row justify-content-center text-center scroll-reveal revealed">
+        <div class="col-lg-8">
+          <span class="section-subtitle">My Approach</span>
+          <h2 class="section-title mb-4">Editing Philosophy</h2>
+          <i class="bi bi-quote text-teal mb-3 d-block" style="font-size: 3rem; opacity: 0.2; color: var(--accent-teal);"></i>
+          <p class="lead-text fst-italic mb-4">
+            "I focus on logical structure and rhetorical flow, not just grammatical typos. True academic editing goes beyond surface corrections; it elevates the clarity and impact of your intellectual contribution."
+          </p>
+          <div class="d-flex justify-content-center">
+            <ul class="premium-check-list text-start d-inline-block" style="max-width: 500px;">
+              <li class="check-list-item mb-3">
+                <span class="check-icon-wrapper"><i class="bi bi-patch-check-fill"></i></span>
+                <div class="check-list-text">
+                  <strong>Clarity Over Jargon:</strong> Simplifying complex ideas without losing academic rigor.
+                </div>
+              </li>
+              <li class="check-list-item mb-3">
+                <span class="check-icon-wrapper"><i class="bi bi-patch-check-fill"></i></span>
+                <div class="check-list-text">
+                  <strong>Structural Integrity:</strong> Ensuring a logical progression of arguments.
+                </div>
+              </li>
+              <li class="check-list-item">
+                <span class="check-icon-wrapper"><i class="bi bi-patch-check-fill"></i></span>
+                <div class="check-list-text">
+                  <strong>Direct Collaboration:</strong> You converse directly with me, ensuring subject specialism and secure data control.
+                </div>
+              </li>
+            </ul>
           </div>
         </div>
       </div>

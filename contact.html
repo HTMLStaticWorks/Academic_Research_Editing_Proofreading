@@ -87,11 +87,24 @@
   </header>
 
   <!-- Banner Header -->
-  <section class="py-5" style="padding-top: 140px !important; background-color: var(--secondary-bg);">
-    <div class="container py-5 text-center scroll-reveal revealed">
-      <span class="section-subtitle">Secure Inquiry</span>
-      <h1 class="display-5 fw-bold text-main mb-3">Book Editing Consultation</h1>
-      <p class="lead-text mx-auto mb-0" style="max-width: 600px;">
+  <section class="py-5" style="
+    padding-top: 140px !important;
+    padding-bottom: 80px !important;
+    position: relative;
+    background: url('assets/images/contact-banner-bg.png') center center / cover no-repeat;
+    overflow: hidden;
+  ">
+    <!-- Dark overlay for readability -->
+    <div style="
+      position: absolute; inset: 0;
+      background: rgba(10, 25, 47, 0.68);
+      backdrop-filter: blur(1px);
+    "></div>
+
+    <div class="container py-5 text-center scroll-reveal revealed" style="position: relative; z-index: 1;">
+      <span class="section-subtitle" style="color: var(--accent-teal); opacity: 1;">Secure Inquiry</span>
+      <h1 class="display-5 fw-bold mb-3" style="color: #ffffff;">Book Editing Consultation</h1>
+      <p class="mx-auto mb-0" style="max-width: 600px; color: rgba(255,255,255,0.82); font-size: 1.05rem; line-height: 1.75;">
         Provide details about your paper, timeline and target journal parameters below to request a direct consulting review.
       </p>
     </div>
@@ -233,6 +246,18 @@
 
       </div>
     </div>
+  </section>
+  <!-- Map Section -->
+  <section class="border-top" style="line-height: 0;">
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1511.0914616982054!2d-73.98661904128527!3d40.7484405380587!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9b3117469%3A0xd134e199a405a163!2sEmpire%20State%20Building!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus" 
+      width="100%" 
+      height="450" 
+      style="border:0; display: block; filter: grayscale(80%) contrast(1.1);" 
+      allowfullscreen="" 
+      loading="lazy" 
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
   </section>
 
   <!-- Footer -->

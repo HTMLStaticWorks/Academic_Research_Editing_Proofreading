@@ -497,8 +497,22 @@ h1, h2, h3, h4, h5, h6 {
   transition: var(--transition-smooth);
   align-self: center;
 }
-.premium-card > a {
+.premium-card > a,
+.premium-card a {
   align-self: center;
+  display: inline-flex;
+  align-items: center;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+.premium-card a i {
+  transition: transform 0.3s ease;
+  margin-left: 0.2rem;
+}
+.premium-card a:hover {
+  color: var(--accent-blue) !important;
+}
+.premium-card a:hover i {
+  transform: translateX(5px);
 }
 .premium-card:hover .card-icon-box {
   background-color: var(--accent-blue);
@@ -1336,3 +1350,118 @@ html[dir="rtl"] .calc-radio {
   line-height: 1;
 }
 
+
+/* Card Hover */
+.card-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.08) !important;
+}
+
+/* =============================================
+   SERVICES ACCORDION
+   ============================================= */
+.services-accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.services-accordion-item {
+  border: 1px solid var(--border-color, #e2e8f0);
+  border-radius: 12px !important;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+}
+.services-accordion-item:hover {
+  box-shadow: 0 6px 24px rgba(0,0,0,0.07);
+}
+.services-accordion-btn {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: var(--card-bg, #ffffff);
+  color: var(--text-main);
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 20px 24px;
+  border: none;
+  width: 100%;
+  text-align: left;
+  transition: background 0.25s ease;
+}
+.services-accordion-btn:not(.collapsed) {
+  background: var(--card-bg, #ffffff);
+  color: var(--accent-teal);
+  box-shadow: none;
+}
+.services-accordion-btn::after {
+  content: '\002B';
+  font-size: 1.4rem;
+  font-weight: 300;
+  margin-left: auto;
+  color: var(--accent-teal);
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+}
+.services-accordion-btn:not(.collapsed)::after {
+  content: '\2212';
+}
+.svc-btn-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: rgba(var(--accent-teal-rgb, 13,110,102), 0.08);
+  color: var(--accent-teal);
+  font-size: 1.3rem;
+  flex-shrink: 0;
+}
+.svc-btn-title {
+  flex: 1;
+}
+.svc-btn-badge {
+  font-size: 0.7rem;
+  font-family: var(--font-sans, sans-serif);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  background: var(--accent-teal);
+  color: #fff;
+  padding: 3px 10px;
+  border-radius: 20px;
+  flex-shrink: 0;
+}
+.services-accordion-body {
+  padding: 28px 28px 32px;
+  background: var(--secondary-bg, #f8fafc);
+  border-top: 1px solid var(--border-color, #e2e8f0);
+}
+.svc-detail-box {
+  background: var(--card-bg, #ffffff);
+  border: 1px solid var(--border-color, #e2e8f0);
+  border-radius: 12px;
+  padding: 24px;
+}
+.svc-detail-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border-color, #e2e8f0);
+  font-size: 0.92rem;
+  color: var(--text-main);
+}
+.svc-detail-row:last-of-type {
+  border-bottom: none;
+}
+.svc-detail-row i {
+  color: var(--accent-teal);
+  font-size: 1rem;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
