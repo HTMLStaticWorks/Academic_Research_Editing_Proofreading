@@ -50,17 +50,6 @@
     </div>
   </div>
 
-  <!-- Theme and RTL Controls Container -->
-  <div class="theme-controls-container">
-    <button id="themeToggle" class="btn-control" aria-label="Toggle Theme">
-      <i class="bi bi-sun-fill light-icon"></i>
-      <i class="bi bi-moon-stars-fill dark-icon"></i>
-    </button>
-    <button id="rtlToggle" class="btn-control" aria-label="Toggle RTL">
-      <span>RTL</span>
-    </button>
-  </div>
-
   <!-- Header & Sticky Navbar -->
   <header>
     <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
@@ -72,9 +61,22 @@
           <span>Editora</span>
         </a>
         
-        <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-          <i class="bi bi-list text-main" style="font-size: 1.75rem;"></i>
-        </button>
+        <div class="d-flex align-items-center gap-2 ms-auto ms-lg-0 order-lg-last theme-controls-wrapper">
+          <!-- Theme and RTL Controls -->
+          <div class="theme-controls-inline d-flex gap-2">
+            <button id="themeToggle" class="btn-control" aria-label="Toggle Theme">
+              <i class="bi bi-sun-fill light-icon"></i>
+              <i class="bi bi-moon-stars-fill dark-icon"></i>
+            </button>
+            <button id="rtlToggle" class="btn-control" aria-label="Toggle RTL">
+              <span>RTL</span>
+            </button>
+          </div>
+          
+          <button class="navbar-toggler border-0 p-0 ms-1" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <i class="bi bi-list text-main" style="font-size: 1.75rem;"></i>
+          </button>
+        </div>
         
         <div class="collapse navbar-collapse d-none d-lg-flex" id="navbarNav">
           <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
@@ -94,11 +96,16 @@
     <!-- Offcanvas Mobile Navigation -->
     <div class="offcanvas offcanvas-start offcanvas-custom d-lg-none" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
       <div class="offcanvas-header">
-        <h5 class="offcanvas-title font-serif fw-bold text-main" id="offcanvasNavbarLabel">Editora</h5>
+        <h5 class="offcanvas-title font-serif fw-bold text-main d-flex align-items-center gap-2" id="offcanvasNavbarLabel">
+          <svg viewBox="0 0 24 24" width="24" height="24" xmlns="http://www.w3.org/2000/svg" style="fill: var(--accent-blue);">
+            <path d="M12 2L2 22h20L12 2zm0 4l6.5 13H5.5L12 6zm-1 5h2v4h-2v-4zm0-3h2v2h-2V8z"/>
+          </svg>
+          <span>Editora</span>
+        </h5>
         <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
       <div class="offcanvas-body">
-        <ul class="navbar-nav justify-content-end flex-grow-1">
+        <ul class="navbar-nav justify-content-center flex-grow-1 text-center">
           <li class="nav-item"><a class="nav-link-custom active" href="index.html">Home</a></li>
           <li class="nav-item"><a class="nav-link-custom" href="home-2.html">Home 2</a></li>
           <li class="nav-item"><a class="nav-link-custom" href="about.html">About</a></li>
@@ -123,25 +130,25 @@
     
     <div class="container relative-content py-5">
       <div class="row align-items-center">
-        <div class="col-lg-7 text-start">
+        <div class="col-lg-7 text-center text-lg-start">
           <span class="section-subtitle scroll-reveal revealed">Scholarly Excellence</span>
-          <h1 class="display-4 fw-bold text-main mb-4 scroll-reveal revealed" style="font-family: var(--font-serif); max-width: 600px;">
+          <h1 class="display-4 fw-bold text-main mb-4 scroll-reveal revealed mx-auto mx-lg-0" style="font-family: var(--font-serif); max-width: 600px;">
             Transforming Research Into Publication-Ready Excellence
           </h1>
-          <p class="lead-text mb-5 scroll-reveal revealed" style="max-width: 550px;">
+          <p class="lead-text mb-5 scroll-reveal revealed mx-auto mx-lg-0" style="max-width: 550px;">
             Expert academic editing and proofreading services designed for researchers, scholars, and publication-focused academics.
           </p>
-          <div class="d-flex flex-wrap gap-3 scroll-reveal revealed">
-            <a href="contact.html" class="btn-premium btn-premium-primary">
+          <div class="d-flex flex-column flex-md-row justify-content-center justify-content-lg-start align-items-center align-items-lg-start gap-3 scroll-reveal revealed">
+            <a href="contact.html" class="btn-premium btn-premium-primary justify-content-center" style="width: 100%; max-width: 300px;">
               Book Editing Consultation <i class="bi bi-arrow-right"></i>
             </a>
-            <a href="services.html" class="btn-premium btn-premium-secondary">
+            <a href="services.html" class="btn-premium btn-premium-secondary justify-content-center" style="width: 100%; max-width: 300px;">
               Explore Services
             </a>
           </div>
         </div>
         
-        <div class="col-lg-5 scroll-reveal revealed d-none d-lg-block">
+        <div class="col-lg-5 scroll-reveal revealed mt-5 mt-lg-0">
           <img src="assets/hero_illustration.png" alt="Academic Research Editing" class="img-fluid rounded shadow" style="max-width: 100%; height: auto;">
         </div>
       </div>
@@ -390,49 +397,65 @@
     </div>
   </section>
 
-  <!-- Subject Specialist Matching Section -->
+  <!-- Our Editorial Process Section -->
   <section class="py-5 bg-light-custom" style="background-color: var(--secondary-bg);">
-    <div class="container py-5">
-      <div class="row align-items-center">
-        <div class="col-lg-6 text-start mb-5 mb-lg-0 scroll-reveal">
-          <span class="section-subtitle">Precision Matcher</span>
-          <h2 class="section-title">Subject Specialist Matching</h2>
-          <p class="lead-text mb-4">
-            Select your discipline to dynamically load current available specialist editors. We align specific doctoral level specialists with your field.
-          </p>
-          <div class="matching-widget">
-            <label for="fieldSelect" class="form-label text-main fw-semibold mb-2">Select Your Research Field:</label>
-            <select id="fieldSelect" class="matching-selector">
-              <option value="medicine">Medicine & Life Sciences</option>
-              <option value="engineering">Engineering & Physical Sciences</option>
-              <option value="humanities">Humanities & Arts</option>
-              <option value="social">Social Sciences & Economics</option>
-            </select>
-            
-            <div class="mb-4">
-              <span class="d-block text-main fw-semibold mb-2">Academic Specializations Tags:</span>
-              <div id="tagsContainer" class="d-flex flex-wrap">
-                <!-- Loaded dynamically by JS -->
+    <div class="container py-5 text-center">
+      <span class="section-subtitle scroll-reveal">How It Works</span>
+      <h2 class="section-title scroll-reveal">Our Editorial Process</h2>
+      <p class="lead-text mx-auto mb-5 scroll-reveal" style="max-width: 700px;">
+        A rigorous, multi-stage workflow designed to elevate your manuscript from a rough draft to a publication-ready masterpiece.
+      </p>
+      
+      <div class="row g-4">
+        <!-- Step 1 -->
+        <div class="col-md-6 col-lg-3 scroll-reveal">
+          <div class="card process-card h-100 border-0 p-4 shadow-sm" style="background-color: var(--card-bg); border-radius: 12px;">
+            <div class="mb-4 text-center">
+              <div class="d-inline-flex align-items-center justify-content-center rounded-circle" style="width: 70px; height: 70px; background-color: rgba(59, 130, 246, 0.1);">
+                <i class="bi bi-file-earmark-text text-accent" style="font-size: 2rem; color: var(--accent-blue);"></i>
               </div>
             </div>
-            
-            <button id="matchBtn" class="btn-premium btn-premium-primary w-100 justify-content-center">
-              Scan & Find My Specialist Editor
-            </button>
+            <h4 class="text-main fw-bold mb-3" style="font-family: var(--font-serif);">1. Submission</h4>
+            <p class="text-muted small mb-0">Securely upload your manuscript and detail your target journal requirements.</p>
           </div>
         </div>
         
-        <div class="col-lg-6 scroll-reveal">
-          <div class="text-center p-4">
-            <span class="section-subtitle mb-3 d-block">Matching Registry Visualizer</span>
-            <div class="matching-visualizer mb-4">
-              <div class="radar-grid"></div>
-              <div class="radar-ping"></div>
-              <i class="bi bi-fingerprint text-accent" style="font-size: 3rem; color: var(--accent-teal); z-index: 1;"></i>
+        <!-- Step 2 -->
+        <div class="col-md-6 col-lg-3 scroll-reveal">
+          <div class="card process-card h-100 border-0 p-4 shadow-sm" style="background-color: var(--card-bg); border-radius: 12px;">
+            <div class="mb-4 text-center">
+              <div class="d-inline-flex align-items-center justify-content-center rounded-circle" style="width: 70px; height: 70px; background-color: rgba(20, 184, 166, 0.1);">
+                <i class="bi bi-person-check text-accent" style="font-size: 2rem; color: var(--accent-teal);"></i>
+              </div>
             </div>
-            <div id="matchResult">
-              <span class="text-muted">Select a discipline on the left and click match.</span>
+            <h4 class="text-main fw-bold mb-3" style="font-family: var(--font-serif);">2. Expert Match</h4>
+            <p class="text-muted small mb-0">We assign your work to a PhD-level specialist with direct experience in your field.</p>
+          </div>
+        </div>
+        
+        <!-- Step 3 -->
+        <div class="col-md-6 col-lg-3 scroll-reveal">
+          <div class="card process-card h-100 border-0 p-4 shadow-sm" style="background-color: var(--card-bg); border-radius: 12px;">
+            <div class="mb-4 text-center">
+              <div class="d-inline-flex align-items-center justify-content-center rounded-circle" style="width: 70px; height: 70px; background-color: rgba(212, 167, 44, 0.1);">
+                <i class="bi bi-vector-pen text-accent" style="font-size: 2rem; color: var(--accent-gold);"></i>
+              </div>
             </div>
+            <h4 class="text-main fw-bold mb-3" style="font-family: var(--font-serif);">3. Deep Editing</h4>
+            <p class="text-muted small mb-0">Comprehensive revision of structure, flow, clarity, and academic tone.</p>
+          </div>
+        </div>
+        
+        <!-- Step 4 -->
+        <div class="col-md-6 col-lg-3 scroll-reveal">
+          <div class="card process-card h-100 border-0 p-4 shadow-sm" style="background-color: var(--card-bg); border-radius: 12px;">
+            <div class="mb-4 text-center">
+              <div class="d-inline-flex align-items-center justify-content-center rounded-circle" style="width: 70px; height: 70px; background-color: rgba(59, 130, 246, 0.1);">
+                <i class="bi bi-award text-accent" style="font-size: 2rem; color: var(--accent-blue);"></i>
+              </div>
+            </div>
+            <h4 class="text-main fw-bold mb-3" style="font-family: var(--font-serif);">4. Final Polish</h4>
+            <p class="text-muted small mb-0">A final QA pass guarantees readiness for high-impact journal submission.</p>
           </div>
         </div>
       </div>

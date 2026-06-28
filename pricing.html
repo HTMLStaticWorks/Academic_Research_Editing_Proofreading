@@ -36,17 +36,6 @@
     </div>
   </div>
 
-  <!-- Theme and RTL Controls Container -->
-  <div class="theme-controls-container">
-    <button id="themeToggle" class="btn-control" aria-label="Toggle Theme">
-      <i class="bi bi-sun-fill light-icon"></i>
-      <i class="bi bi-moon-stars-fill dark-icon"></i>
-    </button>
-    <button id="rtlToggle" class="btn-control" aria-label="Toggle RTL">
-      <span>RTL</span>
-    </button>
-  </div>
-
   <!-- Header & Sticky Navbar -->
   <header>
     <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
@@ -58,9 +47,22 @@
           <span>Editora</span>
         </a>
         
-        <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-          <i class="bi bi-list text-main" style="font-size: 1.75rem;"></i>
-        </button>
+        <div class="d-flex align-items-center gap-2 ms-auto ms-lg-0 order-lg-last theme-controls-wrapper">
+          <!-- Theme and RTL Controls -->
+          <div class="theme-controls-inline d-flex gap-2">
+            <button id="themeToggle" class="btn-control" aria-label="Toggle Theme">
+              <i class="bi bi-sun-fill light-icon"></i>
+              <i class="bi bi-moon-stars-fill dark-icon"></i>
+            </button>
+            <button id="rtlToggle" class="btn-control" aria-label="Toggle RTL">
+              <span>RTL</span>
+            </button>
+          </div>
+          
+          <button class="navbar-toggler border-0 p-0 ms-1" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <i class="bi bi-list text-main" style="font-size: 1.75rem;"></i>
+          </button>
+        </div>
         
         <div class="collapse navbar-collapse d-none d-lg-flex" id="navbarNav">
           <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
@@ -80,11 +82,16 @@
     <!-- Offcanvas Mobile Navigation -->
     <div class="offcanvas offcanvas-start offcanvas-custom d-lg-none" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
       <div class="offcanvas-header">
-        <h5 class="offcanvas-title font-serif fw-bold text-main" id="offcanvasNavbarLabel">Editora</h5>
+        <h5 class="offcanvas-title font-serif fw-bold text-main d-flex align-items-center gap-2" id="offcanvasNavbarLabel">
+          <svg viewBox="0 0 24 24" width="24" height="24" xmlns="http://www.w3.org/2000/svg" style="fill: var(--accent-blue);">
+            <path d="M12 2L2 22h20L12 2zm0 4l6.5 13H5.5L12 6zm-1 5h2v4h-2v-4zm0-3h2v2h-2V8z"/>
+          </svg>
+          <span>Editora</span>
+        </h5>
         <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
       <div class="offcanvas-body">
-        <ul class="navbar-nav justify-content-end flex-grow-1">
+        <ul class="navbar-nav justify-content-center flex-grow-1 text-center">
           <li class="nav-item"><a class="nav-link-custom" href="index.html">Home</a></li>
           <li class="nav-item"><a class="nav-link-custom" href="home-2.html">Home 2</a></li>
           <li class="nav-item"><a class="nav-link-custom" href="about.html">About</a></li>
@@ -267,29 +274,65 @@
         <span class="section-subtitle">Common Queries</span>
         <h2 class="section-title">Frequently Asked Questions</h2>
       </div>
-      <div class="row g-4 justify-content-center scroll-reveal revealed">
-        <div class="col-md-5">
-          <div class="p-4 rounded border h-100 card-hover" style="background-color: var(--card-bg);">
-            <h5 class="fw-bold text-main mb-3" style="font-size: 1.1rem;"><i class="bi bi-question-circle me-2" style="color: var(--accent-teal);"></i> How do you calculate the word count?</h5>
-            <p class="text-muted small mb-0">We count all words in the main text, abstract, and figure legends. References, appendices, and equations can be excluded upon request to lower your overall cost.</p>
-          </div>
-        </div>
-        <div class="col-md-5">
-          <div class="p-4 rounded border h-100 card-hover" style="background-color: var(--card-bg);">
-            <h5 class="fw-bold text-main mb-3" style="font-size: 1.1rem;"><i class="bi bi-question-circle me-2" style="color: var(--accent-teal);"></i> What forms of payment are accepted?</h5>
-            <p class="text-muted small mb-0">We accept major credit cards (Visa, MasterCard, Amex) via our secure integrations, as well as institutional purchase orders or direct wire transfers for larger grants.</p>
-          </div>
-        </div>
-        <div class="col-md-5">
-          <div class="p-4 rounded border h-100 card-hover" style="background-color: var(--card-bg);">
-            <h5 class="fw-bold text-main mb-3" style="font-size: 1.1rem;"><i class="bi bi-question-circle me-2" style="color: var(--accent-teal);"></i> Can you format to specific journal guidelines?</h5>
-            <p class="text-muted small mb-0">Yes! If you provide the target journal's name or URL during submission, we will ensure all margins, citations, and structural requirements match perfectly.</p>
-          </div>
-        </div>
-        <div class="col-md-5">
-          <div class="p-4 rounded border h-100 card-hover" style="background-color: var(--card-bg);">
-            <h5 class="fw-bold text-main mb-3" style="font-size: 1.1rem;"><i class="bi bi-question-circle me-2" style="color: var(--accent-teal);"></i> Is my manuscript kept confidential?</h5>
-            <p class="text-muted small mb-0">Absolutely. All documents are transmitted over encrypted 256-bit SSL connections, and our editors are bound by strict non-disclosure agreements (NDAs).</p>
+      <div class="row justify-content-center scroll-reveal revealed">
+        <div class="col-lg-8">
+          <div class="accordion" id="pricingFAQ">
+            <!-- FAQ Item 1 -->
+            <div class="accordion-item mb-3 border shadow-sm" style="border-radius: 8px; overflow: hidden; background-color: var(--card-bg); border-color: var(--border-color) !important;">
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button collapsed fw-bold text-main" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne" style="background-color: var(--card-bg); font-size: 1.05rem;">
+                  <i class="bi bi-question-circle me-3" style="color: var(--accent-teal);"></i> How do you calculate the word count?
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#pricingFAQ">
+                <div class="accordion-body text-muted small" style="background-color: var(--card-bg);">
+                  We count all words in the main text, abstract, and figure legends. References, appendices, and equations can be excluded upon request to lower your overall cost.
+                </div>
+              </div>
+            </div>
+            
+            <!-- FAQ Item 2 -->
+            <div class="accordion-item mb-3 border shadow-sm" style="border-radius: 8px; overflow: hidden; background-color: var(--card-bg); border-color: var(--border-color) !important;">
+              <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed fw-bold text-main" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" style="background-color: var(--card-bg); font-size: 1.05rem;">
+                  <i class="bi bi-question-circle me-3" style="color: var(--accent-teal);"></i> What forms of payment are accepted?
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#pricingFAQ">
+                <div class="accordion-body text-muted small" style="background-color: var(--card-bg);">
+                  We accept major credit cards (Visa, MasterCard, Amex) via our secure integrations, as well as institutional purchase orders or direct wire transfers for larger grants.
+                </div>
+              </div>
+            </div>
+            
+            <!-- FAQ Item 3 -->
+            <div class="accordion-item mb-3 border shadow-sm" style="border-radius: 8px; overflow: hidden; background-color: var(--card-bg); border-color: var(--border-color) !important;">
+              <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed fw-bold text-main" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" style="background-color: var(--card-bg); font-size: 1.05rem;">
+                  <i class="bi bi-question-circle me-3" style="color: var(--accent-teal);"></i> Can you format to specific journal guidelines?
+                </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#pricingFAQ">
+                <div class="accordion-body text-muted small" style="background-color: var(--card-bg);">
+                  Yes! If you provide the target journal's name or URL during submission, we will ensure all margins, citations, and structural requirements match perfectly.
+                </div>
+              </div>
+            </div>
+            
+            <!-- FAQ Item 4 -->
+            <div class="accordion-item border shadow-sm" style="border-radius: 8px; overflow: hidden; background-color: var(--card-bg); border-color: var(--border-color) !important;">
+              <h2 class="accordion-header" id="headingFour">
+                <button class="accordion-button collapsed fw-bold text-main" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour" style="background-color: var(--card-bg); font-size: 1.05rem;">
+                  <i class="bi bi-question-circle me-3" style="color: var(--accent-teal);"></i> Is my manuscript kept confidential?
+                </button>
+              </h2>
+              <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#pricingFAQ">
+                <div class="accordion-body text-muted small" style="background-color: var(--card-bg);">
+                  Absolutely. All documents are transmitted over encrypted 256-bit SSL connections, and our editors are bound by strict non-disclosure agreements (NDAs).
+                </div>
+              </div>
+            </div>
+            
           </div>
         </div>
       </div>

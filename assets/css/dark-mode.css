@@ -4,6 +4,7 @@
  */
 
 html[data-theme="dark"] {
+  color-scheme: dark;
   --primary-bg: #0B132B;
   --secondary-bg: #111827;
   --card-bg: #172033;
@@ -22,6 +23,7 @@ html[data-theme="dark"] {
   --accent-teal-rgb: 20, 184, 166;
   
   --border-color: #1F2937;
+  --accordion-icon-filter: invert(1) brightness(2);
 }
 
 /* Adjust navbar transparency and blur in dark mode */
@@ -43,6 +45,9 @@ html[data-theme="dark"] .premium-input:not(:placeholder-shown) ~ .premium-label 
 html[data-theme="dark"] .offcanvas-custom {
   background-color: var(--primary-bg);
   border-color: var(--border-color);
+}
+html[data-theme="dark"] .btn-close {
+  filter: invert(1) grayscale(100%) brightness(200%);
 }
 
 /* Button style overrides for dark mode readability */

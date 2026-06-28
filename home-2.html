@@ -45,17 +45,6 @@
     </div>
   </div>
 
-  <!-- Theme and RTL Controls Container -->
-  <div class="theme-controls-container">
-    <button id="themeToggle" class="btn-control" aria-label="Toggle Theme">
-      <i class="bi bi-sun-fill light-icon"></i>
-      <i class="bi bi-moon-stars-fill dark-icon"></i>
-    </button>
-    <button id="rtlToggle" class="btn-control" aria-label="Toggle RTL">
-      <span>RTL</span>
-    </button>
-  </div>
-
   <!-- Header & Sticky Navbar -->
   <header>
     <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
@@ -67,9 +56,22 @@
           <span>Editora</span>
         </a>
         
-        <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-          <i class="bi bi-list text-main" style="font-size: 1.75rem;"></i>
-        </button>
+        <div class="d-flex align-items-center gap-2 ms-auto ms-lg-0 order-lg-last theme-controls-wrapper">
+          <!-- Theme and RTL Controls -->
+          <div class="theme-controls-inline d-flex gap-2">
+            <button id="themeToggle" class="btn-control" aria-label="Toggle Theme">
+              <i class="bi bi-sun-fill light-icon"></i>
+              <i class="bi bi-moon-stars-fill dark-icon"></i>
+            </button>
+            <button id="rtlToggle" class="btn-control" aria-label="Toggle RTL">
+              <span>RTL</span>
+            </button>
+          </div>
+          
+          <button class="navbar-toggler border-0 p-0 ms-1" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <i class="bi bi-list text-main" style="font-size: 1.75rem;"></i>
+          </button>
+        </div>
         
         <div class="collapse navbar-collapse d-none d-lg-flex" id="navbarNav">
           <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
@@ -89,11 +91,16 @@
     <!-- Offcanvas Mobile Navigation -->
     <div class="offcanvas offcanvas-start offcanvas-custom d-lg-none" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
       <div class="offcanvas-header">
-        <h5 class="offcanvas-title font-serif fw-bold text-main" id="offcanvasNavbarLabel">Editora</h5>
+        <h5 class="offcanvas-title font-serif fw-bold text-main d-flex align-items-center gap-2" id="offcanvasNavbarLabel">
+          <svg viewBox="0 0 24 24" width="24" height="24" xmlns="http://www.w3.org/2000/svg" style="fill: var(--accent-blue);">
+            <path d="M12 2L2 22h20L12 2zm0 4l6.5 13H5.5L12 6zm-1 5h2v4h-2v-4zm0-3h2v2h-2V8z"/>
+          </svg>
+          <span>Editora</span>
+        </h5>
         <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
       <div class="offcanvas-body">
-        <ul class="navbar-nav justify-content-end flex-grow-1">
+        <ul class="navbar-nav justify-content-center flex-grow-1 text-center">
           <li class="nav-item"><a class="nav-link-custom" href="index.html">Home</a></li>
           <li class="nav-item"><a class="nav-link-custom active" href="home-2.html">Home 2</a></li>
           <li class="nav-item"><a class="nav-link-custom" href="about.html">About</a></li>
@@ -116,19 +123,19 @@
     
     <div class="container relative-content py-5">
       <div class="row align-items-center g-5">
-        <div class="col-lg-6 text-start">
+        <div class="col-lg-6 text-center text-lg-start">
           <span class="section-subtitle scroll-reveal revealed">Alternative Edition</span>
-          <h1 class="display-4 fw-bold text-main mb-4 scroll-reveal revealed" style="font-family: var(--font-serif); line-height: 1.2;">
+          <h1 class="display-4 fw-bold text-main mb-4 scroll-reveal revealed mx-auto mx-lg-0" style="font-family: var(--font-serif); line-height: 1.2; max-width: 600px;">
             Polishing Raw Drafts into High-Impact Literature
           </h1>
-          <p class="lead-text mb-5 scroll-reveal revealed">
+          <p class="lead-text mb-5 scroll-reveal revealed mx-auto mx-lg-0" style="max-width: 600px;">
             An elite scholarly consulting partnership designed to refine, structure, and perfect journal manuscripts, grant proposals, and dissertations.
           </p>
-          <div class="d-flex flex-wrap gap-3 scroll-reveal revealed">
-            <a href="#estimator" class="btn-premium btn-premium-primary">
+          <div class="d-flex flex-column flex-sm-row flex-wrap align-items-center justify-content-center justify-content-lg-start gap-3 scroll-reveal revealed w-100">
+            <a href="#estimator" class="btn-premium btn-premium-primary w-100 w-sm-auto" style="min-width: 280px; max-width: 320px;">
               Calculate Editing Rates <i class="bi bi-calculator"></i>
             </a>
-            <a href="#pillars" class="btn-premium btn-premium-secondary">
+            <a href="#pillars" class="btn-premium btn-premium-secondary w-100 w-sm-auto" style="min-width: 280px; max-width: 320px;">
               Discover Our Method
             </a>
           </div>

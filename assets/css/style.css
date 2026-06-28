@@ -33,7 +33,7 @@
   --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   --transition-fast: all 0.2s ease;
   
-  --safe-toggle-padding: 130px;
+  --safe-toggle-padding: 105px;
 }
 
 /* Base Setup */
@@ -49,6 +49,18 @@ html, body {
 /* Ensure text-muted uses our CSS variables for dark mode compatibility */
 .text-muted {
   color: var(--text-muted) !important;
+}
+
+.text-main {
+  color: var(--text-main) !important;
+}
+
+.accordion-button {
+  color: var(--text-main) !important;
+}
+
+.accordion-button::after {
+  filter: var(--accordion-icon-filter, none);
 }
 
 /* Global: Remove default browser underlines from all links */
@@ -140,6 +152,25 @@ html[dir="rtl"] {
   align-items: center;
   gap: 8px;
 }
+.process-card {
+  transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.process-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1) !important;
+}
+html[data-theme="dark"] .process-card:hover {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4) !important;
+}
+.navbar-toggler {
+  color: var(--text-main) !important;
+}
+.navbar-toggler i {
+  color: var(--text-main) !important;
+}
+.navbar-toggler:focus {
+  box-shadow: none !important;
+}
 .navbar-brand-custom svg {
   fill: var(--accent-blue);
   width: 28px;
@@ -170,18 +201,12 @@ html[dir="rtl"] {
   transform-origin: right;
   transition: transform 0.3s ease;
 }
+/* Nav Link Hover Animation */
 .nav-link-custom:hover::after, .nav-link-custom.active::after {
   transform: scaleX(1);
   transform-origin: left;
 }
 
-/* Adjust paddings so navbar items never overlap the floating buttons */
-html[dir="ltr"] .navbar-custom {
-  padding-right: var(--safe-toggle-padding);
-}
-html[dir="rtl"] .navbar-custom {
-  padding-left: var(--safe-toggle-padding);
-}
 html[dir="ltr"] .navbar-expand-lg .navbar-collapse {
   margin-right: 0;
 }
@@ -189,21 +214,10 @@ html[dir="rtl"] .navbar-expand-lg .navbar-collapse {
   margin-left: 0;
 }
 
-/* Floating Theme and RTL Control Widget */
-.theme-controls-container {
-  position: fixed;
-  top: 18px;
-  z-index: 10050;
+/* Theme and RTL Control Widget */
+.theme-controls-inline {
   display: flex;
   gap: 8px;
-}
-html[dir="ltr"] .theme-controls-container {
-  right: 20px;
-  left: auto;
-}
-html[dir="rtl"] .theme-controls-container {
-  left: 20px;
-  right: auto;
 }
 .btn-control {
   width: 42px;
@@ -705,7 +719,9 @@ html[dir="rtl"] .check-icon-wrapper {
   border-radius: 30px;
   font-size: 0.85rem;
   font-weight: 500;
-  margin: 0.25rem;
+  margin: 0;
+  width: 100%;
+  text-align: center;
   cursor: pointer;
   transition: var(--transition-fast);
 }
@@ -1065,9 +1081,26 @@ html[dir="rtl"] .offcanvas-custom {
 .offcanvas-body .nav-link-custom {
   font-size: 1.15rem;
   padding: 0.85rem 0 !important;
+  position: relative;
 }
 .offcanvas-body .nav-link-custom::after {
   display: none;
+}
+.offcanvas-body .nav-link-custom::before {
+  content: '';
+  position: absolute;
+  left: -1.5rem; /* align to the left edge of the offcanvas */
+  top: 15%;
+  bottom: 15%;
+  width: 4px;
+  background-color: var(--accent-blue);
+  border-radius: 0 4px 4px 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.offcanvas-body .nav-link-custom.active::before,
+.offcanvas-body .nav-link-custom:hover::before {
+  opacity: 1;
 }
 
 /* ==========================================

@@ -24,17 +24,6 @@
     </div>
   </div>
 
-  <!-- Theme and RTL Controls Container -->
-  <div class="theme-controls-container">
-    <button id="themeToggle" class="btn-control" aria-label="Toggle Theme">
-      <i class="bi bi-sun-fill light-icon"></i>
-      <i class="bi bi-moon-stars-fill dark-icon"></i>
-    </button>
-    <button id="rtlToggle" class="btn-control" aria-label="Toggle RTL">
-      <span>RTL</span>
-    </button>
-  </div>
-
   <!-- Header & Sticky Navbar -->
   <header>
     <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
@@ -46,9 +35,22 @@
           <span>Editora</span>
         </a>
         
-        <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-          <i class="bi bi-list text-main" style="font-size: 1.75rem;"></i>
-        </button>
+        <div class="d-flex align-items-center gap-2 ms-auto ms-lg-0 order-lg-last theme-controls-wrapper">
+          <!-- Theme and RTL Controls -->
+          <div class="theme-controls-inline d-flex gap-2">
+            <button id="themeToggle" class="btn-control" aria-label="Toggle Theme">
+              <i class="bi bi-sun-fill light-icon"></i>
+              <i class="bi bi-moon-stars-fill dark-icon"></i>
+            </button>
+            <button id="rtlToggle" class="btn-control" aria-label="Toggle RTL">
+              <span>RTL</span>
+            </button>
+          </div>
+          
+          <button class="navbar-toggler border-0 p-0 ms-1" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <i class="bi bi-list text-main" style="font-size: 1.75rem;"></i>
+          </button>
+        </div>
         
         <div class="collapse navbar-collapse d-none d-lg-flex" id="navbarNav">
           <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
@@ -68,11 +70,16 @@
     <!-- Offcanvas Mobile Navigation -->
     <div class="offcanvas offcanvas-start offcanvas-custom d-lg-none" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
       <div class="offcanvas-header">
-        <h5 class="offcanvas-title font-serif fw-bold text-main" id="offcanvasNavbarLabel">Editora</h5>
+        <h5 class="offcanvas-title font-serif fw-bold text-main d-flex align-items-center gap-2" id="offcanvasNavbarLabel">
+          <svg viewBox="0 0 24 24" width="24" height="24" xmlns="http://www.w3.org/2000/svg" style="fill: var(--accent-blue);">
+            <path d="M12 2L2 22h20L12 2zm0 4l6.5 13H5.5L12 6zm-1 5h2v4h-2v-4zm0-3h2v2h-2V8z"/>
+          </svg>
+          <span>Editora</span>
+        </h5>
         <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
       <div class="offcanvas-body">
-        <ul class="navbar-nav justify-content-end flex-grow-1">
+        <ul class="navbar-nav justify-content-center flex-grow-1 text-center">
           <li class="nav-item"><a class="nav-link-custom" href="index.html">Home</a></li>
           <li class="nav-item"><a class="nav-link-custom" href="home-2.html">Home 2</a></li>
           <li class="nav-item"><a class="nav-link-custom" href="about.html">About</a></li>
@@ -117,10 +124,10 @@
         <div class="col-lg-6 scroll-reveal revealed">
           <img src="assets/images/featured-blog-post.png" alt="Featured Research Post" class="img-fluid rounded shadow-sm w-100" style="object-fit: cover; min-height: 350px; border: 1px solid var(--border-color);">
         </div>
-        <div class="col-lg-6 text-start scroll-reveal revealed">
+        <div class="col-lg-6 text-center text-lg-start scroll-reveal revealed">
           <span class="badge text-white px-3 py-2 rounded-pill mb-3" style="background-color: var(--accent-teal);">Featured Insight</span>
           <h2 class="section-title mb-4">Mastering Data Visualization in High-Impact Journals</h2>
-          <p class="lead-text mb-4">
+          <p class="lead-text mb-4 mx-auto mx-lg-0" style="max-width: 600px;">
             Discover the crucial role that cleanly formatted graphs, clear tables, and precise captions play in securing peer-reviewer approval.
           </p>
           <a href="#" class="btn-premium btn-premium-primary d-inline-flex align-items-center gap-2">Read Featured Article <i class="bi bi-arrow-right"></i></a>
@@ -218,9 +225,9 @@
       <p class="mx-auto mb-5 text-white-50" style="max-width: 650px; font-size: 1.1rem;">
         Get a free sample edit or schedule a consultation with Dr. Claire Sinclair to discuss your upcoming publication goals.
       </p>
-      <div class="d-flex justify-content-center gap-3 flex-wrap">
-        <a href="contact.html" class="btn-premium btn-cta-primary">Schedule Consultation</a>
-        <a href="pricing.html" class="btn-premium btn-cta-outline">View Pricing Plans</a>
+      <div class="d-flex flex-column flex-sm-row justify-content-center align-items-center gap-3 w-100">
+        <a href="contact.html" class="btn-premium btn-cta-primary w-100" style="max-width: 300px;">Schedule Consultation</a>
+        <a href="pricing.html" class="btn-premium btn-cta-outline w-100" style="max-width: 300px;">View Pricing Plans</a>
       </div>
     </div>
   </section>
