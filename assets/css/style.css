@@ -207,10 +207,10 @@ html[data-theme="dark"] .process-card:hover {
   transform-origin: left;
 }
 
-html[dir="ltr"] .navbar-expand-lg .navbar-collapse {
+html[dir="ltr"] .navbar-expand-xl .navbar-collapse {
   margin-right: 0;
 }
-html[dir="rtl"] .navbar-expand-lg .navbar-collapse {
+html[dir="rtl"] .navbar-expand-xl .navbar-collapse {
   margin-left: 0;
 }
 
@@ -293,6 +293,7 @@ h1, h2, h3, h4, h5, h6 {
   transition: var(--transition-smooth);
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
   position: relative;
   overflow: hidden;
@@ -1061,46 +1062,75 @@ html[dir="rtl"] .back-to-top { left: 25px; }
   box-shadow: 0 8px 20px rgba(15, 118, 110, 0.3);
 }
 
-/* Offcanvas custom premium mobile adjustments */
-.offcanvas-custom {
-  background-color: var(--primary-bg);
-  border-left: 1px solid var(--border-color);
-  max-width: 320px;
+/* Premium Collapsible Dropdown Menu for Mobile & Tablet (< 1200px) */
+@media (max-width: 1199.98px) {
+  .navbar-collapse {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--primary-bg);
+    border-bottom: 1px solid var(--border-color);
+    padding: 1.25rem 0;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.04);
+    z-index: 999;
+  }
+  
+  html[data-theme="dark"] .navbar-collapse {
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+  }
+
+  .navbar-collapse .navbar-nav {
+    padding: 0 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .navbar-collapse .nav-item {
+    width: 100%;
+  }
+
+  /* Style links as premium rounded tabs */
+  .navbar-collapse .nav-link-custom {
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 0.75rem 1.25rem !important;
+    display: block;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    transition: var(--transition-smooth);
+    position: relative;
+    text-align: center;
+  }
+
+  /* Highlight active/hover items with a premium, subtle tab background and border */
+  .navbar-collapse .nav-link-custom:hover,
+  .navbar-collapse .nav-link-custom.active {
+    background-color: rgba(var(--accent-blue-rgb), 0.06);
+    border-color: rgba(var(--accent-blue-rgb), 0.12);
+    color: var(--accent-blue) !important;
+  }
+
+  /* Custom dark mode adjustment for active tabs */
+  html[data-theme="dark"] .navbar-collapse .nav-link-custom:hover,
+  html[data-theme="dark"] .navbar-collapse .nav-link-custom.active {
+    background-color: rgba(var(--accent-blue-rgb), 0.15);
+    border-color: rgba(var(--accent-blue-rgb), 0.25);
+  }
+
+  /* Hide the desktop underline animation */
+  .navbar-collapse .nav-link-custom::after {
+    display: none;
+  }
 }
-html[dir="rtl"] .offcanvas-custom {
-  border-left: none;
-  border-right: 1px solid var(--border-color);
+
+/* Animate hamburger toggler to close icon */
+.navbar-toggler[aria-expanded="true"] .icon-menu {
+  display: none !important;
 }
-.offcanvas-header {
-  border-bottom: 1px solid var(--border-color);
-  padding: 1.5rem;
-}
-.offcanvas-body {
-  padding: 2rem 1.5rem;
-}
-.offcanvas-body .nav-link-custom {
-  font-size: 1.15rem;
-  padding: 0.85rem 0 !important;
-  position: relative;
-}
-.offcanvas-body .nav-link-custom::after {
-  display: none;
-}
-.offcanvas-body .nav-link-custom::before {
-  content: '';
-  position: absolute;
-  left: -1.5rem; /* align to the left edge of the offcanvas */
-  top: 15%;
-  bottom: 15%;
-  width: 4px;
-  background-color: var(--accent-blue);
-  border-radius: 0 4px 4px 0;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-.offcanvas-body .nav-link-custom.active::before,
-.offcanvas-body .nav-link-custom:hover::before {
-  opacity: 1;
+.navbar-toggler[aria-expanded="true"] .icon-close {
+  display: block !important;
 }
 
 /* ==========================================

@@ -52,7 +52,7 @@
 
   <!-- Header & Sticky Navbar -->
   <header>
-    <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+    <nav class="navbar navbar-expand-xl navbar-custom fixed-top">
       <div class="container">
         <a class="navbar-brand-custom" href="index.html">
           <svg viewBox="0 0 24 24" width="28" height="28" xmlns="http://www.w3.org/2000/svg">
@@ -61,7 +61,7 @@
           <span>Editora</span>
         </a>
         
-        <div class="d-flex align-items-center gap-2 ms-auto ms-lg-0 order-lg-last theme-controls-wrapper">
+        <div class="d-flex align-items-center gap-2 ms-auto ms-xl-0 order-xl-last theme-controls-wrapper">
           <!-- Theme and RTL Controls -->
           <div class="theme-controls-inline d-flex gap-2">
             <button id="themeToggle" class="btn-control" aria-label="Toggle Theme">
@@ -73,12 +73,13 @@
             </button>
           </div>
           
-          <button class="navbar-toggler border-0 p-0 ms-1" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-            <i class="bi bi-list text-main" style="font-size: 1.75rem;"></i>
+          <button class="navbar-toggler border-0 p-0 ms-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-list icon-menu text-main" style="font-size: 1.75rem;"></i>
+            <i class="bi bi-x-lg icon-close text-main" style="font-size: 1.75rem; display: none;"></i>
           </button>
         </div>
         
-        <div class="collapse navbar-collapse d-none d-lg-flex" id="navbarNav">
+        <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
             <li class="nav-item"><a class="nav-link-custom active" href="index.html">Home</a></li>
             <li class="nav-item"><a class="nav-link-custom" href="home-2.html">Home 2</a></li>
@@ -93,30 +94,7 @@
       </div>
     </nav>
 
-    <!-- Offcanvas Mobile Navigation -->
-    <div class="offcanvas offcanvas-start offcanvas-custom d-lg-none" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-      <div class="offcanvas-header">
-        <h5 class="offcanvas-title font-serif fw-bold text-main d-flex align-items-center gap-2" id="offcanvasNavbarLabel">
-          <svg viewBox="0 0 24 24" width="24" height="24" xmlns="http://www.w3.org/2000/svg" style="fill: var(--accent-blue);">
-            <path d="M12 2L2 22h20L12 2zm0 4l6.5 13H5.5L12 6zm-1 5h2v4h-2v-4zm0-3h2v2h-2V8z"/>
-          </svg>
-          <span>Editora</span>
-        </h5>
-        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-      </div>
-      <div class="offcanvas-body">
-        <ul class="navbar-nav justify-content-center flex-grow-1 text-center">
-          <li class="nav-item"><a class="nav-link-custom active" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link-custom" href="home-2.html">Home 2</a></li>
-          <li class="nav-item"><a class="nav-link-custom" href="about.html">About</a></li>
-          <li class="nav-item"><a class="nav-link-custom" href="services.html">Services</a></li>
-          <li class="nav-item"><a class="nav-link-custom" href="case-studies.html">Case Studies</a></li>
-          <li class="nav-item"><a class="nav-link-custom" href="blog.html">Blog</a></li>
-          <li class="nav-item"><a class="nav-link-custom" href="pricing.html">Pricing</a></li>
-          <li class="nav-item"><a class="nav-link-custom" href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-    </div>
+
   </header>
 
   <!-- Hero Section -->
@@ -138,11 +116,11 @@
           <p class="lead-text mb-5 scroll-reveal revealed mx-auto mx-lg-0" style="max-width: 550px;">
             Expert academic editing and proofreading services designed for researchers, scholars, and publication-focused academics.
           </p>
-          <div class="d-flex flex-column flex-md-row justify-content-center justify-content-lg-start align-items-center align-items-lg-start gap-3 scroll-reveal revealed">
-            <a href="contact.html" class="btn-premium btn-premium-primary justify-content-center" style="width: 100%; max-width: 300px;">
+          <div class="d-flex flex-column flex-md-row justify-content-center justify-content-lg-start align-items-stretch gap-3 scroll-reveal revealed">
+            <a href="contact.html" class="btn-premium btn-premium-primary justify-content-center text-center" style="width: 100%; max-width: 300px;">
               Book Editing Consultation <i class="bi bi-arrow-right"></i>
             </a>
-            <a href="services.html" class="btn-premium btn-premium-secondary justify-content-center" style="width: 100%; max-width: 300px;">
+            <a href="services.html" class="btn-premium btn-premium-secondary justify-content-center text-center" style="width: 100%; max-width: 300px;">
               Explore Services
             </a>
           </div>

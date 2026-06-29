@@ -44,14 +44,6 @@ html[dir="rtl"] .premium-form-group .form-icon-end {
   right: auto;
 }
 
-/* Offcanvas custom premium mobile adjustments for RTL */
-html[dir="rtl"] .offcanvas.offcanvas-start {
-  transform: translateX(100%);
-}
-html[dir="rtl"] .offcanvas.offcanvas-start.show {
-  transform: none;
-}
-
 /* Fix footer subscription form alignment in RTL */
 html[dir="rtl"] footer .position-relative button.position-absolute {
   right: auto !important;

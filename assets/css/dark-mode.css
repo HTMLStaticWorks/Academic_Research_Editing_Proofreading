@@ -41,11 +41,7 @@ html[data-theme="dark"] .premium-input:not(:placeholder-shown) ~ .premium-label 
   background-color: var(--secondary-bg);
 }
 
-/* Offcanvas custom premium mobile adjustments for dark mode */
-html[data-theme="dark"] .offcanvas-custom {
-  background-color: var(--primary-bg);
-  border-color: var(--border-color);
-}
+
 html[data-theme="dark"] .btn-close {
   filter: invert(1) grayscale(100%) brightness(200%);
 }
